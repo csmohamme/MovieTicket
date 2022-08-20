@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace MovieTicket.Models
+{
+    public class Actor_Movie
+    {
+        public int MovieId { get; set; }
+        public Movie Movie { get; set; }
+        public int ACtorId { get; set; }
+        public Actor Actor { get; set; }
+    }
+}
