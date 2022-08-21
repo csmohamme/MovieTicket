@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace MovieTicket.Models
 {
     public class Producer
+
     {
         [Key]
         public int Id { get; set; }
