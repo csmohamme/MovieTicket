@@ -12,7 +12,7 @@ using MovieTicket.Data;
 namespace MovieTicket.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220820071727_InitialCreate")]
+    [Migration("20220828081550_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,13 +51,13 @@ namespace MovieTicket.Migrations
 
             modelBuilder.Entity("MovieTicket.Models.Actor_Movie", b =>
                 {
-                    b.Property<int>("ACtorId")
+                    b.Property<int>("ActorId")
                         .HasColumnType("int");
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
 
-                    b.HasKey("ACtorId", "MovieId");
+                    b.HasKey("ActorId", "MovieId");
 
                     b.HasIndex("MovieId");
 
@@ -165,7 +165,7 @@ namespace MovieTicket.Migrations
                 {
                     b.HasOne("MovieTicket.Models.Actor", "Actor")
                         .WithMany("Actors_Movies")
-                        .HasForeignKey("ACtorId")
+                        .HasForeignKey("ActorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

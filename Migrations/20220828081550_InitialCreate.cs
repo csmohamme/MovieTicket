@@ -92,14 +92,14 @@ namespace MovieTicket.Migrations
                 columns: table => new
                 {
                     MovieId = table.Column<int>(type: "int", nullable: false),
-                    ACtorId = table.Column<int>(type: "int", nullable: false)
+                    ActorId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Actor_Movies", x => new { x.ACtorId, x.MovieId });
+                    table.PrimaryKey("PK_Actor_Movies", x => new { x.ActorId, x.MovieId });
                     table.ForeignKey(
-                        name: "FK_Actor_Movies_Actors_ACtorId",
-                        column: x => x.ACtorId,
+                        name: "FK_Actor_Movies_Actors_ActorId",
+                        column: x => x.ActorId,
                         principalTable: "Actors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);

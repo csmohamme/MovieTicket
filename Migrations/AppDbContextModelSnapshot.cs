@@ -49,13 +49,13 @@ namespace MovieTicket.Migrations
 
             modelBuilder.Entity("MovieTicket.Models.Actor_Movie", b =>
                 {
-                    b.Property<int>("ACtorId")
+                    b.Property<int>("ActorId")
                         .HasColumnType("int");
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
 
-                    b.HasKey("ACtorId", "MovieId");
+                    b.HasKey("ActorId", "MovieId");
 
                     b.HasIndex("MovieId");
 
@@ -163,7 +163,7 @@ namespace MovieTicket.Migrations
                 {
                     b.HasOne("MovieTicket.Models.Actor", "Actor")
                         .WithMany("Actors_Movies")
-                        .HasForeignKey("ACtorId")
+                        .HasForeignKey("ActorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

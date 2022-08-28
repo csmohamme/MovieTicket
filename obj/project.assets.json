@@ -1865,30 +1865,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mostafa\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Mostafa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mostafa\\MovieTicket\\MovieTicket.csproj",
+      "projectUniqueName": "C:\\Users\\Mostafa\\Documents\\GitHub\\MovieTicket\\MovieTicket.csproj",
       "projectName": "MovieTicket",
-      "projectPath": "C:\\Users\\Mostafa\\MovieTicket\\MovieTicket.csproj",
+      "projectPath": "C:\\Users\\Mostafa\\Documents\\GitHub\\MovieTicket\\MovieTicket.csproj",
       "packagesPath": "C:\\Users\\Mostafa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mostafa\\MovieTicket\\obj\\",
+      "outputPath": "C:\\Users\\Mostafa\\Documents\\GitHub\\MovieTicket\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Mostafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Mostafa\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
