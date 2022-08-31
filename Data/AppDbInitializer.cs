@@ -179,7 +179,7 @@ namespace MovieTicket.Data
                             ProducerId = 1,
                             MovieCategory = MovieCategory.Action
                         },
-                         new Movie(){
+                        new Movie(){
                             Name = "Life",
                             Description = "this is the Life movie description",
                             Price = 39.5,
