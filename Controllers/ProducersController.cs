@@ -17,7 +17,5 @@ namespace MovieTicket.Controllers
             var allProducers = await _context.Producers.ToListAsync();
             return View(allProducers);
         }
-
-
     }
 }

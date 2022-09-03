@@ -1,19 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
 using MovieTicket.Data;
+using MovieTicket.Data.Services;
 
 namespace MovieTicket.Controllers
 {
     public class ActorsController : Controller
     {
-        private readonly AppDbContext _context;
-        public ActorsController(AppDbContext context)
+        private readonly IActorsService _service;
+        public ActorsController(IActorsService service)
         {
-            _context = context;
+            _service = service;
         }
         public IActionResult Index()
         {
-            var allActors = _context.Actors.ToList();
+            var allActors = _service.GetAll();
             return View(allActors);
+        }
+        //Get Actors/Create
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }
