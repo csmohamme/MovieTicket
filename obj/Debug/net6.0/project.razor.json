@@ -16298,6 +16298,11 @@
   "RootNamespace": "MovieTicket",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\Mostafa\\Documents\\GitHub\\MovieTicket\\Views\\Shared\\NotFound.cshtml",
+      "TargetPath": "Views\\Shared\\NotFound.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Mostafa\\Documents\\GitHub\\MovieTicket\\Views\\Cinemas\\Index.cshtml",
       "TargetPath": "Views\\Cinemas\\Index.cshtml",
       "FileKind": "mvc"

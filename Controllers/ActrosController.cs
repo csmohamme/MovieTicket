@@ -40,14 +40,14 @@ namespace MovieTicket.Controllers
         public IActionResult Details(int id)
         {
             var ActorDetails = _service.GetById(id);
-            if (ActorDetails == null) return View("Not Found");
+            if (ActorDetails == null) return View("NotFound");
             return View(ActorDetails);
         }
         //Get Actors/Edit/id
         public IActionResult Edit(int id)
         {
             var ActorDetails = _service.GetById(id);
-            if (ActorDetails == null) return View("Not Found");
+            if (ActorDetails == null) return View("NotFound");
             return View(ActorDetails);
         }
 
@@ -67,14 +67,14 @@ namespace MovieTicket.Controllers
         public IActionResult Delete(int id)
         {
             var ActorDetails = _service.GetById(id);
-            if (ActorDetails == null) return View("Not Found");
+            if (ActorDetails == null) return View("NotFound");
             return View(ActorDetails);
         }
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
             var ActorDetails = _service.GetById(id);
-            if (ActorDetails == null) return View("Not Found");
+            if (ActorDetails == null) return View("NotFound");
             _service.Delete(id);
             return RedirectToAction(nameof(Index));
         }
