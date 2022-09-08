@@ -35,14 +35,48 @@ namespace MovieTicket.Controllers
             return View(actor);
         }
 
-        // Get Actors/Details/1
+        // Get Actors/Details/id
         [HttpGet]
-        public async Task<IActionResult> Details(int id)
+        public IActionResult Details(int id)
         {
             var ActorDetails = _service.GetById(id);
-            if (ActorDetails == null) return View("Empty");
+            if (ActorDetails == null) return View("Not Found");
+            return View(ActorDetails);
+        }
+        //Get Actors/Edit/id
+        public IActionResult Edit(int id)
+        {
+            var ActorDetails = _service.GetById(id);
+            if (ActorDetails == null) return View("Not Found");
             return View(ActorDetails);
         }
 
+        [HttpPost]
+        public IActionResult Edit(int id, [Bind("Id,ProfilePictureURL,FullName,Bio")] Actor newActor)
+        {
+            // the condition is'nt working
+            if (ModelState.IsValid)
+            {
+                _service.Update(id, newActor);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(newActor);
+
+        }
+        //Delete Actors/Delete/id
+        public IActionResult Delete(int id)
+        {
+            var ActorDetails = _service.GetById(id);
+            if (ActorDetails == null) return View("Not Found");
+            return View(ActorDetails);
+        }
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var ActorDetails = _service.GetById(id);
+            if (ActorDetails == null) return View("Not Found");
+            _service.Delete(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
